@@ -1,0 +1,79 @@
+/* Mobile First */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:0;
+    margin: 0;
+}
+
+.headerContainer{ /* Class selector (.) selects the class called headerContainer in this example*/
+    background: rgba(0,0,0,0.8);
+}
+
+header{
+    display: flex; /* makes each element in the header flex */
+    flex-wrap: wrap; /* wraps them */
+    justify-content: space-around; /* divdes then with even space around them */
+}
+
+header > div{ /*targets all divs in the header tag*/
+    padding:10px;
+}
+
+nav{
+    flex: 1 1 100%; 
+     /* this is shorthand for flex 
+    You could write flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%; */
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+header h2{ /* contextual selector - are you in header & are you a h2? */
+    color:#fff;
+}
+
+main{
+    margin:0 10px
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap; /* wraps the flex elements */
+}
+
+.articles img { /* this is for the imgs in the articles, not all images */
+    width: 100%; /* the 100% is % of the parent's width */
+}
+
+.articles>div { /* the > is a selector that means all the children of an element, in this case divs in articles*/
+    flex-basis: 50%; /* flex-basis property sets the target width for the flex item - ie in this case use 50% of the available space */
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+nav ul li{
+    padding:8px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    display: block; /* this makes it display the link the whole way across, so it's not just the words that are the link, but the whole thing */
+}
+
+footer{
+    background: rgba(0,0,0,0.8);
+    margin-top: 40px;
+    padding:40px;
+}
+footer > div > p{
+    color:#fff;
+    text-align: center;
+    font-size:0.8rem;
+}

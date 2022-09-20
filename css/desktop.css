@@ -1,0 +1,72 @@
+.burgerMenuContainer {
+    display: none;
+}
+
+nav {
+    height: 80px;
+    flex: 1 1 80%;
+    display: flex;
+    justify-content: flex-end;
+    /* For mobile toggle */
+    overflow: auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 4px;
+    border-bottom: none;
+}
+
+nav ul li a {
+    margin: 0 15px;
+    border: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+.headerContainer {
+    padding-top: 20px;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto 8rem auto;
+}
+
+
+.articles { /* this will override the .articles on the mobile as it's the last one to load, but will only load on devices over 680px*/
+    flex-wrap: nowrap;
+    font-size: 1.2rem;
+}
+
+
+.articles > div {
+    flex: 1 1 25%;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.articles > div:first-child { /* this targets the first child, in this case the first div in articles*/
+    margin-left: 0;
+}
+
+.articles > div:last-child { /* this targets the last child, in this case the last div in articles*/
+    margin-right: 0;
+}
+
+
+header { /* this is because we have the luxury of white space, on mobile you want to use all available space, this overrides that for desktop to give a better desktop look */
+    max-width: 1280px;
+    margin: auto;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
